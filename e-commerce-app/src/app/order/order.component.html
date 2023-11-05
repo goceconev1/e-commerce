@@ -1,0 +1,21 @@
+<div class="main">
+  <div class="cards">
+    <div class="cards_item card">
+      <h1>Your order card</h1>
+      <ul>
+        <li *ngFor="let product of orderProducts">
+          <div class="order-item">
+            <h2>{{ product.title }}</h2>
+            <p>Price: ${{ product.price }}</p>
+          </div>
+
+        </li>
+      </ul>
+      <button class="btn_back" (click)="goBack()">Back to product</button>
+    </div>
+
+
+
+  </div>
+
+</div>
