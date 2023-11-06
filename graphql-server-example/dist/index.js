@@ -10,6 +10,7 @@ const typeDefs = `#graphql
   type Product {
     id:ID
     title: String
+    price: Int
     description: String
   }
 
@@ -24,26 +25,31 @@ const books = [
     {
         id: 1,
         title: 'The Awakening',
+        price: 15,
         description: 'Kate Chopin',
     },
     {
         id: 2,
         title: 'City of Glass',
+        price: 10,
         description: 'Paul Auster',
     },
     {
         id: 3,
         title: 'Titanic',
+        price: 5,
         description: 'Paul Doe',
     },
     {
         id: 4,
         title: 'Doctor OZ',
+        price: 20,
         description: 'John Doe',
     },
     {
         id: 5,
         title: 'Marvel',
+        price: 40,
         description: 'Jane Doe',
     },
 ];

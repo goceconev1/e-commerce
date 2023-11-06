@@ -44,9 +44,11 @@ h1 {
     background: rgb(11, 45, 197);
 }
 
+
 .btn:hover {
     background-color: rgb(73, 71, 199);
 }
+
 
 .btn_back {
     color: white;
@@ -113,4 +115,8 @@ h1 {
 
 select {
     padding: 5px;
+}
+
+.addToCart {
+    background-color: red;
 }

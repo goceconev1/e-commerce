@@ -1,4 +1,5 @@
 export interface Product {
+  [x: string]: any;
   id: number;
 
   title: string;
@@ -6,6 +7,7 @@ export interface Product {
   price: number;
 }
 export interface ProductQueryResponse {
+  data: any;
   product: any;
   books: Product[];
 }

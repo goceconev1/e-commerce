@@ -6,16 +6,21 @@
     <option value="price-low-to-high">Price: Low to High</option>
     <option value="price-high-to-low">Price: High to Low</option>
   </select>
-  <input [(ngModel)]="filterText" placeholder="Filter by name" (input)="applySortingAndFiltering()">
+  <input [(ngModel)]="filterText" placeholder="Filter by title" (input)="applySortingAndFiltering()">
 </div>
 
 <ul class="main">
-  <li class="cards" *ngFor="let product of products">
+  <li class="cards" *ngFor="let product of sortedProducts">
     <div class="cards_item card">
       <h2>{{ product.title }}</h2>
+      <h3>{{ product.price }}$</h3>
       <p>{{ product.description }}</p>
-      <!-- You can add other details here if needed -->
-      <button class="btn" (click)="viewProductDetails(product.id)">View Details</button>
+      <button class="btn_back" (click)="addToCart(product)">Add to Cart</button>
+      <br>
+      <button class="btn" [routerLink]="['/product', product.id]">View Details</button>
+
+
     </div>
   </li>
+
 </ul>

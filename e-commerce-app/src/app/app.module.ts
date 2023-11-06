@@ -12,6 +12,12 @@ import { ApolloModule, APOLLO_OPTIONS } from 'apollo-angular';
 import { HttpLink } from 'apollo-angular/http';
 import { InMemoryCache } from '@apollo/client/core';
 
+import { RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [
+  { path: '', component: ProductListComponent },
+  { path: 'product/:id', component: ProductDetailComponent },
+];
 const uri = 'http://localhost:4000/graphql';
 
 export function createApollo(httpLink: HttpLink) {
@@ -35,8 +41,10 @@ export function createApollo(httpLink: HttpLink) {
     FormsModule,
     HttpClientModule,
     ApolloModule,
+    [RouterModule.forRoot(routes)]
 
   ],
+  exports: [RouterModule],
   providers: [
     {
       provide: APOLLO_OPTIONS,
